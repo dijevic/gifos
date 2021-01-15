@@ -1,0 +1,207 @@
+.main{
+    .buscador{
+        margin-top: 31px;
+        .contenedor{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+            
+            .contenedor-ilustra-header{
+
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                min-height: 130px;
+                min-width: 269px;
+                .img{
+                   display: flex;
+                   justify-content: center;
+                   width: 70%;
+                   min-width: 269px;
+                   max-width: 400px;
+                   img{
+                       width: 100%;
+                       height: 100%;
+                   }
+                }
+            }
+
+            .contenedor-buscador{
+               
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               width: 87%;
+               min-width: 240px;
+               min-height: 50px;
+               max-width: 551px;
+               flex-direction: column;
+               border: 1px solid $color-principal;
+               border-radius: 27px;
+               border-radius: 27px;
+               margin: 0px auto;
+               padding-right: 20px;
+               padding-left: 20px;
+               margin-bottom: 73px;
+               body.dark &{
+                   border: 1px solid #ffffff;
+                   input{
+                       color: #6B7989;
+                   }
+               }
+             
+            
+               .contenedor-buscador-2{
+                   display: flex;
+                   justify-content: space-between;
+                   align-items: center;
+                   width: 100%;
+                   max-width:551px ;
+                   flex-wrap: nowrap;
+                   margin-bottom: 10px;
+                   margin-top: 15px;
+                   input{
+                    font-family: 'Roboto';
+                    font-weight: 400;
+                    font-size: 16px;
+                    color: #000000;
+                    border: none;
+                    width: 85%;
+                    margin-left: 6px;
+                    background: none;
+
+                   }
+                   #btn-buscar{
+                       display: none;
+                   }
+                   .btn-cancel{
+                       display: none;
+                       cursor: pointer;
+                       transition: 1s ease all;
+                       background: url('/assets/close.svg');
+                       background-repeat: no-repeat;
+                       width: 14px;
+                       height: 14px;
+                       body.dark &{
+                           background: url('/assets/close-modo-noct.svg');
+                           width: 14px;
+                           height: 14px;
+                           background-repeat: no-repeat;
+                       }
+
+                   }
+                   .icon-serch-left{
+                       transition: 1s ease all;
+                       display: none;
+                       width: 20px;
+                       height: 20px;
+                       background: url('/assets/icon-search.svg');
+                       background-repeat: no-repeat;
+                       body.dark &{
+                        background: url('/assets/search-suge.svg');
+                        background-repeat: no-repeat;
+
+                       }
+                   }
+                   .icon-serch-right{
+                        transition: 1s ease all;
+                        width: 20px;
+                        height: 20px;
+                        background: url('/assets/icon-search.svg');
+                        background-repeat: no-repeat;
+                        cursor: pointer;
+                        body.dark &{
+                            background: url('/assets/icon-search-modo-noct.svg');
+                            background-repeat: no-repeat;
+                            cursor: pointer;
+
+
+                        }
+
+                   }
+                  
+                 
+               }
+               .contenedor-sugerencias{
+                
+                   width: 100%;
+                   border-top: 1px solid #9CAFC3 ;
+                   margin-bottom: 10px;
+                   display: none;
+                   .sugerencia{
+                       display: flex;
+                       justify-content: flex-start;
+                       align-items: center;
+                       flex-wrap: nowrap;
+                       width: 80%;
+                       margin-bottom: 10px;
+                       margin-top: 10px;
+                       cursor: pointer;
+                       .sugerencia-img{
+                           display: flex;
+                           justify-content: start;
+                           align-items: center;
+                           width: 18px;
+                           height: 18px;
+                          div{
+                              background: url('/assets/search-suge.svg');
+                              background-repeat: no-repeat;
+                              width: 100%;
+                              height: 100%;
+                          }
+                          
+                       }
+                       .sugerencia-descripcion{
+                        font-family: 'Roboto';
+                        font-weight: 400;
+                        font-size: 16px;
+                        text-align: left;
+                        margin-left: 28px;
+                        .descripcion{ 
+                            font-family: 'Roboto';
+                            font-weight: 400;
+                            font-size: 16px;
+                            color: #9CAFC3;
+                            text-align: left;
+
+                        }
+                       }
+                   }
+                  
+               }
+               .contenedor-buscador.prueba1 &{
+                   display: none;
+               }
+               
+        }
+        .trending-titulo{
+            margin: 0px auto;
+            font-family: 'Montserrat';
+            font-weight: 700;
+            font-size: 16px;
+            color: $color-principal;
+            text-align: center;
+            line-height: 25px;
+            body.dark &{
+                color: #ffffff;
+            }
+        }
+        .texto-trending{
+            font-family: 'Montserrat';
+            font-weight: 500;
+            font-size: 14px;
+            color: $color-principal;
+            text-align: center;
+            line-height: 25px;
+            display: block;
+            margin:0 auto;
+            body.dark &{
+                color: #ffffff;
+            }
+            
+        }
+    }
+    }
+}

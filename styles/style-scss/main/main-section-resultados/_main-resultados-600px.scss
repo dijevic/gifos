@@ -1,0 +1,9 @@
+@media screen and(min-width:600px){
+    .main{
+        .resultados{
+            .contenedor-resultados{
+                grid-template-columns: repeat(3,1fr);
+            }
+        }
+    }
+}

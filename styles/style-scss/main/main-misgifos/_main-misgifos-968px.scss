@@ -1,0 +1,32 @@
+@media screen and (min-width:968px){
+    .main{
+        .mis-gifos{
+            margin-top: 12px;
+            .titulo-gifos{
+                margin-top: 8px;
+                font-size: 35px;
+                line-height: 30px;
+            }
+            .contenedor-resultados{
+                grid-template-columns: repeat(4,1fr) ;
+                margin-top: 36px;
+                .contenedor{
+                    .contenedor-modal{
+                        width: 80%;
+                    }
+                    .contenedor-info-tools{
+                        display: flex; &:hover{
+                     background: rgba($color:#572EE5, $alpha: 0.6);
+                     &:hover ~ .tools , .informacion{
+                         display: flex;
+                     }
+                     &:hover ~ .informacion , .tools{
+                         display: flex;
+                     }
+                    }
+                    }
+                }
+            }
+        }
+    }
+}

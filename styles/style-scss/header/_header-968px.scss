@@ -1,0 +1,99 @@
+@media screen and (min-width:968px){
+    .header{
+        width: 100% ;
+        font-size: 18px;
+       .contenedor{
+           font-size: 16px;
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+           flex-direction: row;
+           
+           .nav-bar-logo{
+            margin-left: 78px;
+            margin-top: 18px;
+            margin-bottom: 12px;
+            width: 60px;
+            height: 60px;
+            z-index: 10;
+            background: url('/assets/logo-desktop.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        label{
+            display: none;
+        }
+
+        .btn-x{
+            display: none;
+            visibility: hidden;
+            z-index: 0;
+        }
+        .btn-burguer{
+            display: none;
+            visibility: hidden;
+        }
+        .menu{
+            position: static;
+            width: 100%;
+            height: 90px;
+            background: none;
+            display: flex;
+            justify-content: flex-end;
+            ul{
+                margin: 36px 78px 38px 0px;
+                display: flex;
+                flex-direction: row;
+                #btn-light{
+                    display: none;
+                }
+                li{
+                   
+                    a{
+                        font-size: 13px;
+                        padding: 0;
+                        color: $color-principal;
+                        letter-spacing: 0;
+                        line-height: 16px;
+                        text-align: center;
+                        margin-left: 48px;
+                        transition: 0.3s ease all;
+                        text-transform: uppercase;
+                        &:hover{
+                            border-bottom: 2px solid $color-borde-turquesa;
+                        }
+                        &:active{
+                            color: #9CAFC3;
+                            border-bottom: none;
+                        }
+                    } 
+                   
+                    .border-bottom-navbar{
+                        display: none;
+                    }
+                    .crear-gifo{
+
+                        display: block;
+                         &:hover{
+                            border-bottom: none
+                        }
+
+                    }
+                }
+
+            }
+            body.dark &{
+                background: none;
+                a{
+                    color: #ffffff;
+                }
+            }
+           
+
+        }
+       
+        
+    }
+    
+}
+}

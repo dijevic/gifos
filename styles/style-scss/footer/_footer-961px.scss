@@ -1,0 +1,25 @@
+@media screen and(min-width:968px){
+    footer{
+        .footer{
+            height: 116px;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 0px;
+            .contenedor{
+                flex-direction: row;
+                align-items: center;
+                p{
+                    margin-top: 15px;
+                    font-size: 13px;
+                    margin-left: 156px;
+
+                }
+
+            }
+            .rights{
+                margin-right:156px;
+                font-size: 13px;
+            }
+        }
+    }
+}

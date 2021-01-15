@@ -1,0 +1,50 @@
+@media screen and(min-width: 968px){
+    .main{
+        .trending-gifos{
+            min-height: 660px;
+            margin-top: 95px;
+            padding-top: 67px;
+           .contenedor{
+               h2{
+                   font-size: 25px;
+                   line-height: 30px;
+               }
+               p{
+                   font-size: 18px;
+                   font-family: 'roboto';
+                   font-weight: 400;
+               }
+               .contenedor-resultados{
+                   margin-top: 55px;
+                   justify-content: center;
+                   overflow: hidden;
+                   .btn-slider-left{
+                       display: block;
+                   }
+                   .btn-slider-right{
+                       display: block;
+                       margin-left: 29px;
+                   }
+                   .contenedor-gifos{
+                       margin-left: 29px;
+                     .gift{
+                         .contenedor-info-tools{
+                            display: flex; 
+                            &:hover{
+                            background: rgba($color:#572EE5, $alpha: 0.6);
+                            &:hover ~ .tools , .informacion{
+                                display: flex;
+                            }
+                            &:hover ~ .informacion , .tools{
+                                display: flex;
+                            }
+                         }
+                     }
+                   }
+               }
+            
+           }
+        }
+    }
+}
+}

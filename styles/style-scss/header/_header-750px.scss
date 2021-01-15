@@ -1,0 +1,27 @@
+// con la vista de 750px(tablet) solo modifico el tamaño de el logo princical y los dos iconos del menu//
+@media screen and(min-width:750px){
+    .header{
+        .contenedor{
+            .nav-bar-logo{
+                width: 60px;
+                height: 52px;
+            }
+            .btn-burguer{
+                width: 18px;
+                height: 18px;
+                img{
+                    width: 18px;
+                    height: 18px;
+                }
+            }
+            .btn-x{ 
+                width: 18px;
+                height: 18px;
+                img{
+                    width: 18px;
+                    height: 18px;
+                }
+            }
+        }
+    }
+}

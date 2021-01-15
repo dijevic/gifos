@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="styles/styles.css"><link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto&display=swap" rel="stylesheet"> 
+    <title>mis gifos</title>
+</head>
+<body>
+    <header class="header">
+        <div class="contenedor">
+            <a href="index.html" class="nav-bar-logo"></a>
+            <input type="checkbox" id="btn-menu" class="checkbox" >
+            <label for="btn-menu" class="btn-burguer"></label>
+            <label for="btn-menu" class="btn-x"></label>
+        
+        <nav class="menu" id="menu">
+            <ul>
+                <li id="btn-dark"><a href="#" class="margin-top" >Modo Nocturno </a> <span class="border-bottom-navbar"></span></li>
+                <li id="btn-light"><a href="#" class="margin-top" >Modo Diurno </a> <span class="border-bottom-navbar"></span></li>
+                <li><a href="favoritos.html" target="_blank">Favoritos </a><span class="border-bottom-navbar"></span></li>
+                <li><a href="mis-gifos.html" target="_blank">Mis GIFOS </a></li>
+                <li><a href="crear-gif.html" target="_blank" class="crear-gifo" ></a></li>
+            </ul>
+        </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="mis-gifos">
+            <div class="contenedor-icon-gifos">
+                <img src="assets/icon-mis-gifos.svg" alt="">
+            </div>
+            <h1 class="titulo-gifos">Mis GIFOS</h1>
+            <div class="sin-resultados">
+                <img class="icon-sin-resultado" src="assets/icon-mis-gifos-sin-contenido.svg" alt="icono sin resultados">
+                <p class="texto">¡Anímate a crear tu primer GIFO!</p>
+            </div>
+            <div class="contenedor-resultados">
+             </div>
+        <div class="modal" id="my-modal">
+            <div class="close-modal"></div>
+            <div class="contenedor-modal">
+                <img class="modal-content" src="#" alt="#">
+            </div>
+            <div class="contenedor-tools-max">
+                <div class="informacion">
+                    <h2 class="user user-modal"></h2>
+                    <p class="gift-titulo titulo-modal">titulo del gift</p>
+                </div>
+                <div class="icon-tools">
+                    <div class="icon-favorito-modal"></div>
+                    <div class="icon-descargar"></div>
+                 </div>
+
+            </div>
+
+        </div>
+        <div class="contenedor-boton">
+            <button class="ver-mas">VER MAS</button>
+        </div>
+        </section>
+
+        <section class="trending-gifos">
+            <div class="contenedor">
+                <h2>Trending GIFOS</h2>
+                <p>Mira los últimos <br> GIFO de nuestra comunidad.</p>
+                <div class="contenedor-resultados" id="contenedor-trending">
+               </div>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <section class="footer">
+            
+            <div class="contenedor">
+                <p>Compartir en:</p>
+                <div class="contenedor-redes-sociales">
+                   <div class="facebook"></div>
+                   <div class="twitter"></div>
+                   <div class="instagram"></div>
+                </div>
+            </div>
+
+            <p class="rights">© GIFOS 2020 All Rights Reserved.</p>
+        </section>
+    </footer>
+    <script src="app-mis-gifos.js"></script>
+    <script src="funciones-icons.js"></script>
+    <script src="dark-mode.js"></script>
+
+</body>
+</html>

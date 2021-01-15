@@ -1,0 +1,59 @@
+@import "styles/style-scss/generales";
+@import "styles/style-scss/variables";
+@import "styles/style-scss/header/header-mobile";
+@import "styles/style-scss/header/header-mobile";
+@import "styles/style-scss/header/header-750px";
+@import "styles/style-scss/header/header-968px";
+@import "styles/style-scss/header/header-desktop";
+@import "styles/style-scss/main/main-section-title/main-section-title-mobile";
+@import "styles/style-scss/main/main-section-title/main-section-968px";
+@import "styles/style-scss/main/main-section-buscador/main-buscador-mobile";
+@import "styles/style-scss/main/main-section-buscador/main-section-buscador-968px";
+@import "styles/style-scss/main/main-section-trending/main-trending-mobile";
+@import "styles/style-scss/footer/footer-mobile";
+@import "styles/style-scss/footer/footer-mobile";
+@import "styles/style-scss/footer/footer-961px";
+@import "styles/style-scss/main/main-section-resultados/resultados-mobile";
+@import "styles/style-scss/main/main-section-resultados/main-resultados-600px";
+@import "styles/style-scss/main/main-section-resultados/main-resultados-968px";
+@import "styles/style-scss/main/main-section-trending/main-trending-800px";
+@import "styles/style-scss/main/main-favoritos/main-favoritos-mobile";
+@import "styles/style-scss/main/main-favoritos/main-favitos-600px";
+@import "styles/style-scss/main/main-favoritos/main-favoritos-968px";
+@import "styles/style-scss/main/main-misgifos/main-mis-gifos-mobile";
+@import "styles/style-scss/main/main-misgifos/main-misgifos-600px";
+@import "styles/style-scss/main/main-misgifos/main-misgifos-968px";
+@import "styles/style-scss/main/main-section-trending/main-trending-968px";
+@import "styles/style-scss/main/main-crear-gifos/crear-gifos";
+@import "styles/style-scss/main/main-crear-gifos/crear-gifos-botones";
+@import "styles/style-scss/main/main-crear-gifos/crear-gifo-1200px";
+@import "styles/style-scss/main/main-crear-gifos/crea-gifo-botones-1200px";
+
+.step-actived{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border:1px solid  #572EE5 ;
+    margin: 0 auto;
+    background:#572EE5 ;
+    color: #ffffff;
+    transition: 0.5s ease-in-out;
+    body.dark &{
+        background: #37383C;
+        color: #ffffff;
+        border: 1px solid #ffffff;
+        &:hover{
+            background: #ffffff;
+            color: #37383C;
+        }
+    }
+    }
+
+

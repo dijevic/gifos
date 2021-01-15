@@ -1,0 +1,36 @@
+.main{
+    width: 100%;
+    .title{
+        margin-top: 7px;
+        .contenedor{
+            .contenedor-titulo{
+                width: 100%;
+               display: flex;
+               justify-content: center;
+               h1{
+                font-family: 'Montserrat';
+                font-weight: 700;
+                font-size: 25px;
+                color:$color-principal;
+                text-align: center;
+                line-height: 33px;
+                width: 286px;
+                br{
+                    display: none;
+                }
+                body.dark &{
+                    color: #ffffff
+                }
+               } 
+               .word-gifos{
+                   @extend h1;
+
+                   color:$color-turquesa-2 ;
+                   body.dark &{
+                       color: $color-turquesa-2;
+                   }
+               }
+            }
+        }
+    }
+}

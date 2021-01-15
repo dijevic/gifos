@@ -1,0 +1,23 @@
+@media screen and(min-width:961px){
+    .main{
+        .buscador{
+            .contenedor{
+                .trending-titulo{
+                    line-height: 25px;
+                    font-size: 18px;
+                }
+                .texto-trending{
+                    line-height: 25px;
+                    font-size: 16px;
+                    br{
+                        display: none;
+                    }
+                }
+              .contenedor-buscador{
+                  display: block;
+                  z-index: 200;
+              }
+            }
+        }
+    }
+}

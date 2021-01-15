@@ -1,0 +1,299 @@
+.main{
+    .mis-gifos{
+        margin-top: 5px;
+        .contenedor-icon-gifos{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+        .titulo-gifos{
+            margin-top: 10px;
+            display: block;
+            text-align: center;
+            font-family: 'Montserrat';
+            font-weight: 700;
+            font-size: 20px;
+            color: #572EE5;
+            line-height: 30px;
+            body.dark &{
+                color: #ffffff;
+            }
+        }
+        .sin-resultados{ 
+            display: block;
+            .icon-sin-resultado{
+                margin: 0 auto;
+                margin-top: 112px;
+                display: block;
+
+        }
+            .texto{
+                font-weight: 700;
+                font-size: 22px;
+                color: #50E3C2;
+                text-align: center;
+                line-height: 33px;
+                margin-top: 25px;
+                font-family: 'Montserrat';
+                body.dark &{
+                    color: #ffffff;
+                }
+            
+        }
+
+        }
+       
+        .contenedor-modal{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin: auto;
+           
+        }
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 250; 
+            padding-top: 100px; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            overflow: hidden;
+            margin: auto;
+            background: #ffffff;
+            body.dark &{
+                background: #37383C ;
+            }
+            .modal-content {
+                margin: auto;
+                display: block;
+                width: 80%;
+                max-width: 695px;
+                max-height: 385px;
+                min-width: 250px;
+                animation-name: zoom;
+                animation-duration: 0.6s;
+                
+              }
+            .close-modal{
+                position: absolute;
+                top: 40px;
+                right: 45px;
+                width: 35px;
+                height: 35px;
+                background: url('/assets/close.svg');
+                background-repeat: no-repeat;
+                body.dark &{
+                    background: url('/assets/close-modo-noct.svg') ;
+                    background-repeat: no-repeat;
+                }
+            }
+            .contenedor-tools-max{
+                display: flex;
+                justify-content: space-between;
+                margin: auto;
+                animation-name: zoom;
+                animation-duration: 0.6s;
+                margin-top: 20px;
+                width: 80%;
+                max-width: 695px;
+                min-width: 250px;
+                .icon-tools{
+                    display: flex;
+                    .icon-favorito-modal{
+                        width: 35px;
+                        height: 35px;
+                        background: url('/assets/icon-fav.svg');
+                        background-repeat: no-repeat;
+                        cursor: pointer;
+                        &:hover{
+                            background: url('/assets/icon-fav-hover.svg');
+                            background-repeat: no-repeat;
+
+                        }
+                        &.actived{
+                            width: 32.5px;
+                            height: 32.5px;
+                            background: url('/assets/icon-fav-active.svg') #ffffff;
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            border-radius: 5px;
+                        }
+                     
+                    }
+                    .icon-descargar{
+                        width: 35px;
+                        height: 35px;
+                        background: url('/assets/icon-download.svg');
+                        background-repeat: no-repeat;
+                        cursor: pointer;
+                        &:hover{
+                            background: url('/assets/icon-download-hover.svg');
+                            background-repeat: no-repeat;
+                        }
+                       
+                    }
+                }
+                body.dark &{
+                    .informacion{
+                        .user{
+                            color: #ffffff;
+                        }
+                        .gift-titulo{
+                            color: #ffffff;
+                        }
+                    }
+                }
+            }
+          }
+          .contenedor-resultados{
+            width: 87%;
+            height: auto;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-gap: 22px;
+            justify-items: center;
+            display: grid;
+            
+            .imagen{
+             width: 100%;
+             height: 100%;
+             cursor: pointer;
+             transition: 1s ease all;
+            
+            
+         }
+ 
+         .contenedor{
+             width: 100%;
+             max-width: 260px;
+             height: 100%;
+             min-height: 90px;
+             min-width: 100px;
+             max-height: 200px;
+             display: flex;
+             justify-content: center;
+             position: relative;
+             
+             }
+             .gift{
+               width: 100%;
+               height: 100%;
+                 .contenedor-info-tools{
+                     display: none;
+                    position: absolute;
+                     width: 100%;
+                     height: 100%;
+                     transition: 1s ease-in-out all;
+                     .tools{
+                         position: absolute;
+                         width: 100%;
+                         display: none;
+                         justify-content: flex-end;
+                         height: 100%;
+                         transition: 1s ease all;
+                         cursor: pointer;
+                         z-index: 10;
+                         margin-top: 10px;
+                         .icon-tools{
+                             margin: 10px 10px 0px 0px;
+                             cursor: pointer;
+                             display: flex;
+                            .icon-eliminar{
+                                width: 35px;
+                                height: 35px;
+                                background: url('/assets/icon-trash-normal.svg');
+                                background-repeat: no-repeat;
+                                &:hover{
+                                    background: url('/assets/icon-trash-hover.svg');
+                                    background-repeat: no-repeat;
+                                }
+                             
+                            }
+                            .icon-descargar{
+                                width: 35px;
+                                height: 35px;
+                                background: url('/assets/icon-download.svg');
+                                background-repeat: no-repeat;
+                                &:hover{
+                                    background: url('/assets/icon-download-hover.svg');
+                                    background-repeat: no-repeat;
+                                }
+                            }
+                            .icon-escalar{ 
+                                width: 35px;
+                                height: 35px;
+                                background: url('/assets/icon-max-normal.svg');
+                                background-repeat: no-repeat;
+                                &:hover{
+                                    background: url('/assets/icon-max-hover.svg');
+                                    background-repeat: no-repeat;
+                                }
+
+                            }
+ 
+                         }
+  
+                     }
+                     .informacion{
+                         
+                         position: absolute;
+                         flex-direction: column;
+                         align-items: flex-start;
+                         justify-content: flex-end;
+                         width: 90%;
+                         height: 90%;
+                         margin-left: 18.5px;
+                         display: none;
+                        
+                         .user{
+                          font-family: 'Roboto';
+                          font-size: 15px;
+                          color:  #ffffff;;
+                          text-align: center;
+                          font-weight: 400;
+                         }
+                         .gift-titulo{
+                          font-family: 'Roboto';
+                          font-size: 16px;
+                          color: #ffffff;
+                          text-align: center;
+                          font-weight: 700;
+                         }
+  
+                     }
+                    
+                 }
+              }
+         }
+         .contenedor-boton{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-top: 80px;
+            .ver-mas{
+                display: block;
+                border: 1px solid #572EE5;
+                border-radius: 25px;
+                width: 127px;
+                height: 50px;
+                background: #ffffff;
+                font-family: 'Montserrat';
+                font-weight: 700;
+                font-size: 13px;
+                color: #572EE5;
+                letter-spacing: 0;
+                text-align: center;
+                transition: 0.5s ease all;
+                &:hover{
+                    background:#572EE5 ;
+                    color: #ffffff;
+                }
+
+       
+    }
+}
+    }
+}

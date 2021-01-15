@@ -1,0 +1,47 @@
+@media screen and(min-width:968px){
+    .main{
+        .resultados{
+            margin-top: 55px;
+            .borde{
+                width: 300px;
+            }
+            .contenedor-titulo-busqueda{
+                margin-top: 60px;
+                margin-bottom: 59px;
+                .titulo-busqueda{
+                    font-size: 35px;
+                    line-height: 30px;
+                }
+
+            }
+            .contenedor-resultados{
+                grid-template-columns: repeat(4,1fr);
+                .contenedor{
+                    .contenedor-modal{
+                        width: 80%;
+                    }
+                    .contenedor-info-tools{
+                        display: flex; &:hover{
+                     background: rgba($color:#572EE5, $alpha: 0.6);
+                     &:hover ~ .tools , .informacion{
+                         display: flex;
+                     }
+                     &:hover ~ .informacion , .tools{
+                         display: flex;
+                     }
+                    }
+                    }
+                }
+            }
+            .texto{
+                font-size: 22px;
+            }
+            .sin-resultado{
+                width: 150px;
+                height: 150px;
+            }
+           
+
+        }
+    }
+}

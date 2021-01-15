@@ -1,0 +1,23 @@
+@media screen and(min-width:968px){
+    .main{
+        min-width: 320px;
+        .title{
+            margin-top: 76px;
+            .contenedor{
+                .contenedor-titulo{
+
+                    h1{
+                        width:100%;
+                        font-size: 35px;
+                        text-align: center;
+                        line-height: 50px;
+                        br{
+                            display: block;
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
