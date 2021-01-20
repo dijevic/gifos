@@ -46,9 +46,8 @@ const maximizar = (event)=>{
         favoritos.forEach(gifo=>{
             let idFavorito = gifo.id;
             if(idFavorito == idIconModalFav){
+              
                 iconModalFav.classList.add('actived')
-            }else{
-                iconModalFav.classList.remove('actived')
             }
         })
     }
@@ -95,6 +94,7 @@ const maxMinPicture = ()=>{
                 }
             })
         }
+      
     })
 
 }

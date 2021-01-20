@@ -7,8 +7,17 @@
                     font-size: 18px;
                 }
                 .texto-trending{
+                    display: flex;
                     line-height: 25px;
                     font-size: 16px;
+                    width: 100%;
+                    cursor: pointer;
+                    justify-content: center;
+                    
+                    &:hover{
+                        border-bottom: 1px solid #50E3C2;
+                        transform: scale(1.1);
+                    }
                     br{
                         display: none;
                     }

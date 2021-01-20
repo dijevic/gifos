@@ -290,4 +290,9 @@ getGifsById(ids).then(resp=>{
 })
 
 
+if(contenedorResultados.children.length == 0 ){
+    BotonverMas.style.display = 'none'
+}else{
+    BotonverMas.style.display ='flex'
 
+}

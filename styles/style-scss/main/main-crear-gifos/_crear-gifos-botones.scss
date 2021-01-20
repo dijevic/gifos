@@ -94,6 +94,33 @@
             
         }
 
+        .step-actived{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Roboto';
+            font-weight: 400;
+            font-size: 18px;
+            text-align: center;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            border:1px solid  #572EE5 ;
+            margin: 0 auto;
+            background:#572EE5 ;
+            color: #ffffff;
+            transition: 0.5s ease-in-out;
+            body.dark &{
+                background: #37383C;
+                color: #ffffff;
+                border: 1px solid #ffffff;
+                &:hover{
+                    background: #ffffff;
+                    color: #37383C;
+                }
+            }
+            }
+
        }
        .pelicula{
            width: 149px;

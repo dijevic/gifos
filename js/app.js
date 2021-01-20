@@ -19,11 +19,12 @@ let tituloBuqueda          = document.querySelector('.titulo-busqueda');
 let iconSinResultado       = document.querySelector('.sin-resultado');
 let txtSinResultado        = document.getElementById('txt-sin-resultado')
 let trendingTitle          = document.querySelector('.trending-titulo');
-let trendingTxt            = document.querySelector('.texto-trending');
+let trendingTxt            = document.querySelector('.contenedor-texto-trending');
 let bordeResultados        = document.querySelector('.borde');
 let contenedorSugerencias  = document.querySelector('.contenedor-sugerencias');
 let userModal              = document.querySelector('.user-modal');
 let tituloModal            = document.querySelector('.titulo-modal');
+let trendContainer         =document.querySelector('.trendContainer')
 let apikey                 = 'UIu9Y60JBJMJggRmYEbpqjWDiVcXoTTv';
 let favoritos              = [];
 let suma                   = 12;
@@ -61,14 +62,32 @@ const trendingTerm = async()=>{
           console.log(err)
       }
 }
+
+// con esta funcion introduzco al html mis terminos de sugerencia
+const dibujarTrendingTerms = (termino)=>{
+    const html = `<p class = "texto-trending trendingItem">${termino}</p>`;
+    let div = document.createElement('div')
+    div.classList.add('trendContainer')
+    div.innerHTML = html;
+    trendingTxt.append(div)
+
+}
 // con esta funcion busco los terminos trending 
 const llamarTrendingTerm = ()=>{
     trendingTerm().then(resp =>{
         let data = resp.data;
         for(let i =0; i < 5;i++){
-            trendingTxt.textContent +=  ` ${data[i]}` ;
+           dibujarTrendingTerms(`  ${data[i]}`)
     
         }
+
+        let trendingTerm = document.querySelectorAll('.trendingItem')
+        trendingTerm.forEach((term)=>{
+            term.addEventListener('click',()=>{
+                llamarBusqueda(term.textContent)
+                inputBuscador.value = term.textContent;
+            })
+        })
     })
 }
 
@@ -208,7 +227,7 @@ const menuSticky = ()=>{
                 buscador.style.position = 'fixed';
                 buscador.style.top = '0';
                 buscador.style.left = '0';
-                buscador.style.maxWidth = '290px'
+                buscador.style.maxWidth = '200px'
                 buscador.style.transform = 'translate(150px,25px)';
                 buscador.style.transition = '0.5s ease all';
                 contenedorSugerencias.style.display = 'none'
@@ -490,7 +509,7 @@ const cancelarBuqueda = ()=>{
     iconSearchLeft.style.display = 'none';
     tituloBuqueda.style.display = 'none';
     bordeResultados.style.display = 'none';
-    trendingTxt.style.display = 'block';
+    trendingTxt.style.display = 'flex';
     trendingTitle.style.display = 'block';
     contenedorSugerencias.style.display = 'none';
 }

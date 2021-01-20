@@ -9,6 +9,7 @@ let modal                   = document.getElementById('my-modal')
 let modalContent            = document.querySelector('.modal-content');
 let userModal               = document.querySelector('.user-modal');
 let tituloModal             = document.querySelector('.titulo-modal');
+let tituloFavoritos         = document.querySelector('.titulo-fav')
 let favoritos;
 let suma                    = 12;
 let index                   = 0;
@@ -16,7 +17,7 @@ let index                   = 0;
 
 
 /////funcion en la cual dejo la estructura para crear un nuevo favorito
-const dibujarFavoritos = (user,descripcion,gif)=>{
+const dibujarFavoritos = (user,descripcion,gif,id)=>{
     const html = `
      <div class="gift"> 
     <div class="contenedor-info-tools">
@@ -32,7 +33,7 @@ const dibujarFavoritos = (user,descripcion,gif)=>{
             <p class="gift-titulo">${descripcion}</p>
         </div>
     </div>
-       <img  class="imagen" id="my-img" src="${gif}" alt="${descripcion}">
+       <img  class="imagen" id="${id}" src="${gif}" alt="${descripcion}">
     
    
 
@@ -80,7 +81,8 @@ const llamarFavoritos = ()=>{
         let user         = favoritos[i].user;
         let descripcion  = favoritos[i].descripcion;
         let gifo         = favoritos[i].gif;
-        dibujarFavoritos(user,descripcion,gifo)            
+        let id           = favoritos[i].id
+        dibujarFavoritos(user,descripcion,gifo,id)            
        
        }
        eliminarFavorito()
@@ -89,7 +91,8 @@ const llamarFavoritos = ()=>{
             let user         = favoritos[i].user;
             let descripcion  = favoritos[i].descripcion;
             let gifo         = favoritos[i].gif;
-            dibujarFavoritos(user,descripcion,gifo)            
+            let id           = favoritos[i].id
+            dibujarFavoritos(user,descripcion,gifo,id)              
            
            }
 
@@ -122,7 +125,8 @@ const verMas = ()=>{
                     let user         = favoritos[i].user;
                     let descripcion  = favoritos[i].descripcion;
                     let gifo         = favoritos[i].gif;
-                    dibujarFavoritos(user,descripcion,gifo)    
+                    let id           = favoritos[i].id
+                dibujarFavoritos(user,descripcion,gifo,id)    
                 }
                 eliminarFavorito()
             }else if(suma >= favoritos.length ){
@@ -130,7 +134,8 @@ const verMas = ()=>{
                     let user         = favoritos[i].user;
                     let descripcion  = favoritos[i].descripcion;
                     let gifo         = favoritos[i].gif;
-                    dibujarFavoritos(user,descripcion,gifo)    
+                    let id           = favoritos[i].id
+                    dibujarFavoritos(user,descripcion,gifo,id)  
                 }
                 BotonverMas.style.display = 'none'
                 suma = 12;
@@ -156,6 +161,7 @@ const eliminarFavorito = ()=>{
     iconEliminar.forEach((icon)=>{
         icon.addEventListener('click',()=>{
             const hijo = icon.parentElement.parentElement.parentElement.parentElement.parentElement;
+            console.log(hijo)
             const padre = hijo.parentNode
             let url = icon.parentElement.parentElement.parentElement.parentElement.lastElementChild.src
             let nuevoFavoritos = favoritos.filter((i) => i.gif != url)
@@ -170,8 +176,8 @@ const eliminarFavorito = ()=>{
                         let user         = favoritos[i].user;
                         let descripcion  = favoritos[i].descripcion;
                         let gifo         = favoritos[i].gif;
-                        dibujarFavoritos(user,descripcion,gifo)            
-                       
+                        let id           = favoritos[i].id
+                        dibujarFavoritos(user,descripcion,gifo,id)  
                        }
             
                    eliminarFavorito()
@@ -184,7 +190,8 @@ const eliminarFavorito = ()=>{
                         let user         = favoritos[i].user;
                         let descripcion  = favoritos[i].descripcion;
                         let gifo         = favoritos[i].gif;
-                        dibujarFavoritos(user,descripcion,gifo)            
+                        let id           = favoritos[i].id
+                        dibujarFavoritos(user,descripcion,gifo,id)           
                        
                        }
                        eliminarFavorito()
@@ -253,6 +260,25 @@ const trendingGifos = async(limite)=>{
           
           
   })
+
+ closeModal.addEventListener('click',()=>{
+    if(!iconModalFav.classList.contains('actived')){
+        let source = closeModal.nextElementSibling.firstElementChild.src
+       for(let i = 0 ; i < contenedorResultados.children.length ;i++ ){
+         
+           let src =contenedorResultados.children[i].firstElementChild.firstElementChild.nextElementSibling.src;
+           if(src == source){
+            let hijo = contenedorResultados.children[i];
+            let padre = hijo.parentNode;
+            console.log(hijo)
+            console.log(padre) 
+            padre.removeChild(hijo)
+           }
+           
+         
+       }
+    }
+ })
 
 llamarFavoritos();
 ocultarDivs()
