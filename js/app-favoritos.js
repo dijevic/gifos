@@ -270,8 +270,6 @@ const trendingGifos = async(limite)=>{
            if(src == source){
             let hijo = contenedorResultados.children[i];
             let padre = hijo.parentNode;
-            console.log(hijo)
-            console.log(padre) 
             padre.removeChild(hijo)
            }
            
