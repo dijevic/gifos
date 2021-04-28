@@ -221,6 +221,7 @@ contenedorTrending.insertBefore(div,right)
 const menuSticky = ()=>{
     window.onscroll = function() {
         y = window.scrollY;
+        console.log(y)
         let ejeY = Math.round(y)
         let pantalla = window.screen.width;
         if(ejeY>450 && pantalla >968 && pantalla < 1200){
